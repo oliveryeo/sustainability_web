@@ -15,12 +15,12 @@ module.exports = {
   devServer: {
     static: {
       directory: path.resolve(__dirname, "src"), // Directory to serve
-      port: 3000, // Port number to run
-      open: true, // Opens the browser upon running the script via webpack serve
-      hot: true, // Enables hot reloading
-      compress: true, // Enables GZIP compression for faster webpage loading
-      historyApiFallback: true, // Allows URL to be manipulated by javascript
-    }
+    },
+    port: 3000, // Port number to run
+    open: true, // Opens the browser upon running the script via webpack serve
+    hot: true, // Enables hot reloading
+    compress: true, // Enables GZIP compression for faster webpage loading
+    historyApiFallback: true, // Allows URL to be manipulated by javascript
   },
   module: {
     rules: [
