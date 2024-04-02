@@ -1,9 +1,7 @@
 import './styles.css';
-import SunflowerLogo from './assets/flower.svg';
-
-// <img src="./assets/flower.svg" alt="flower-icon">
+import sunflowerLogoImg from './assets/flower.svg';
 
 // Logo for homepage title
 const pageLogo = document.querySelector("#page-logo");
-pageLogo.src = SunflowerLogo
+pageLogo.src = sunflowerLogoImg;
 pageLogo.alt = "flower-icon";
