@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body,
+#container {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Set default button styling */
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav bar styling */
+#nav-bar {
+  height: 3rem;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+
+#nav-bar > button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+}
+
+#nav-bar > button:hover {
+  cursor: pointer;
+  color: darkgray;
+}
+
+#nav-bar > button:active {
+  color: lightgray;
+}
+
+#nav-bar > button:nth-child(1) {
+  display: flex;
+  margin-left: 0rem;
+  margin-right: 1.5rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  align-items: center;
+}
+
+#nav-bar > button:nth-child(1):hover { /* Do not change color when hovered or clicked */
+  color: black;
+}
+
+#nav-bar > button:nth-child(1) > img {
+  height: 2.5rem;
+}
+
+/* Content body styling */
+#content {
+  height: 100%;
+  background-color: antiquewhite;
+}
