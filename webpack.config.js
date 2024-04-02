@@ -1,35 +1,43 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, 'src/index.js')
+    bundle: path.resolve(__dirname, "src/index.js"),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[contenthash].js",
     clean: true,
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "src"), // Directory to serve
+      port: 3000, // Port number to run
+      open: true, // Opens the browser upon running the script via webpack serve
+      hot: true, // Enables hot reloading
+      compress: true, // Enables GZIP compression for faster webpage loading
+      historyApiFallback: true, // Allows URL to be manipulated by javascript
+    }
   },
   module: {
     rules: [
       {
-        test: /\.css$/i, 
-        use: ['style-loader', 'css-loader'],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
-     {
-       test: /\.(png|svg|jpg|jpeg|gif)$/i,
-       type: 'asset/resource',
-     },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './src',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      filename: "index.html",
+      template: "./src/template.html",
     }),
   ],
 };
