@@ -11,15 +11,6 @@ module.exports = {
     filename: '[name].js',
     clean: true,
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './src',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/template.html',
-    }),
-  ],
   module: {
     rules: [
       {
@@ -32,4 +23,13 @@ module.exports = {
      },
     ],
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './src',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+    }),
+  ],
 };
