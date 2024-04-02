@@ -13,6 +13,11 @@ body,
   overflow: auto;
 }
 
+:root {
+  --nav-color: aqua;
+  --content-color: antiquewhite; 
+}
+
 /* Set default button styling */
 button {
   border: none;
@@ -29,7 +34,7 @@ button {
 /* Nav bar styling */
 #nav-bar {
   height: 3rem;
-  background-color: aqua;
+  background-color: var(--nav-color);
   display: flex;
   align-items: center;
 }
@@ -71,5 +76,5 @@ button {
 /* Content body styling */
 #content {
   height: 100%;
-  background-color: antiquewhite;
+  background-color: var(--content-color);
 }
