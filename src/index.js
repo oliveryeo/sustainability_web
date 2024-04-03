@@ -1,4 +1,5 @@
-import './styles.css';
+import './styles/reset.css';
+import './styles/main.css';
 import sunflowerLogoImg from './assets/flower.svg';
 
 // Logo for homepage title
