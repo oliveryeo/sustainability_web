@@ -77,6 +77,11 @@
 
 #help-dropdown > img {
   height: 30%;
+  transition: transform 300ms ease-in-out;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
 }
 
 .dropdown-tab {
@@ -109,10 +114,6 @@
 
 .visible {
   visibility: visible;
-}
-
-.rotate180 {
-  transform: rotate(180deg);
 }
 
 /* Content body styling */
