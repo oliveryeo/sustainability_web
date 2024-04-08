@@ -95,6 +95,8 @@
   justify-content: space-evenly;
   align-items: start;
   background-color: lightgray;
+  opacity: 0%;
+  transition: opacity 300ms ease-in-out;
 }
 
 .dropdown-tab button {
@@ -113,6 +115,7 @@
 }
 
 .visible {
+  opacity: 100%; /* Opacity used for transition animation */
   visibility: visible;
 }
 
