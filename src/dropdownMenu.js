@@ -6,13 +6,6 @@ const runDropdownMenuEvents = () => {
   const dropdownMenuIcon = document.querySelector("#help-dropdown > img");
   
   dropdownMenu.addEventListener("click", () => {
-    // If already visible, remove visibility and return original icon position
-    if (dropdownTab.classList.contains("visible")) {
-      dropdownTab.classList.toggle("visible");
-      dropdownMenuIcon.classList.toggle("rotate180");
-      return;
-    }
-    
     dropdownTab.classList.toggle("visible");
     dropdownMenuIcon.classList.toggle("rotate180");
   })
