@@ -97,6 +97,7 @@
   background-color: lightgray;
   opacity: 0%;
   transition: opacity 300ms ease-in-out;
+  visibility: hidden;
 }
 
 .dropdown-tab button {
@@ -108,10 +109,6 @@
 
 .dropdown-tab button:hover {
   background-color: darkgray;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .visible {
