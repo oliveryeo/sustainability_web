@@ -10,13 +10,27 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  height: 100%;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
 body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
   margin-block-end: 0;
+  margin: 0; /* Added this on my own */
   padding: 0; /* Added this on my own */
+}
+
+/* Set default button styling */
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  padding-block: 0;
+  padding-inline: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -27,7 +41,7 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100%; /* Changed this from min-height to height, and 100vh to 100%. Seen some issues about mobile in stackoverflow for vh */
   line-height: 1.5;
 }
 

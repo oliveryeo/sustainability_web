@@ -4,23 +4,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-html,
-body,
 #container {
   overflow: auto;
+  height: 100%;
 }
 
 :root {
   --nav-color: aqua;
   --content-color: antiquewhite; 
-}
-
-/* Set default button styling */
-button {
-  border: none;
-  background: none;
-  color: inherit;
-  font: inherit;
 }
 
 #container {
@@ -34,9 +25,11 @@ button {
   background-color: var(--nav-color);
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-#nav-bar > button {
+#nav-bar > button, #nav-bar > div {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   padding-left: 1rem;
@@ -44,13 +37,17 @@ button {
   height: 100%;
 }
 
-#nav-bar > button:hover {
-  cursor: pointer;
-  color: darkgray;
+#nav-bar > button:hover, #nav-bar > div:hover {
+  background-color: lightgray;
 }
 
-#nav-bar > button:active {
-  color: lightgray;
+#nav-bar button:hover {
+  cursor: pointer;
+  color: darkblue;
+}
+
+#nav-bar button:active {
+  color: blue;
 }
 
 #nav-bar > button:nth-child(1) {
@@ -62,7 +59,7 @@ button {
   align-items: center;
 }
 
-#nav-bar > button:nth-child(1):hover { /* Do not change color when hovered or clicked */
+#nav-bar > button:nth-child(1):hover { /* Do not change color when hovered or clicked for home icon */
   color: black;
 }
 
@@ -70,8 +67,61 @@ button {
   height: 2.5rem;
 }
 
+#help-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+#help-dropdown > img {
+  height: 30%;
+}
+
+.dropdown-tab {
+  position: absolute;
+  width: calc(150%);
+  height: calc(100% * 2);
+  top: 100%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  background-color: lightgray;
+}
+
+.dropdown-tab button {
+  padding-left: 1rem;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.dropdown-tab button:hover {
+  background-color: darkgray;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
 /* Content body styling */
 #content {
   height: 100%;
   background-color: var(--content-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
 }
