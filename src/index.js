@@ -12,6 +12,7 @@ pageLogo.alt = "flower-icon";
 // Logo for dropdown menu
 const dropdownMenuIcon = document.querySelector("#help-dropdown > img");
 dropdownMenuIcon.src = triangleImg;
+dropdownMenuIcon.alt = "dropdown triangle";
 
 // Run dropdown menu events
 runDropdownMenuEvents();
