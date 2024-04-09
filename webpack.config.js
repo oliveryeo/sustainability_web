@@ -16,7 +16,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"), // Directory to serve
+      directory: path.resolve(__dirname, "src/templates"), // Directory to serve
     },
     port: 3000, // Port number to run
     open: true, // Opens the browser upon running the script via webpack serve
