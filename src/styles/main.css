@@ -54,8 +54,8 @@
   display: flex;
   margin-left: 0rem;
   margin-right: 1.5rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   align-items: center;
 }
 
