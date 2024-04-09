@@ -1,7 +1,7 @@
-import './styles/reset.css';
-import './styles/main.css';
-import sunflowerLogoImg from './assets/flower.svg';
-import triangleImg from './assets/triangle-down.svg';
+import '../styles/reset.css';
+import '../styles/main.css';
+import sunflowerLogoImg from '../assets/flower.svg';
+import triangleImg from '../assets/triangle-down.svg';
 import { runDropdownMenuEvents } from './dropdownMenu';
 
 // Logo for homepage title

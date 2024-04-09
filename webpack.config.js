@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPl
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    index: path.resolve(__dirname, "src/js/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,7 +16,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "src"), // Directory to serve
+      directory: path.resolve(__dirname, "src/templates"), // Directory to serve
     },
     port: 3000, // Port number to run
     open: true, // Opens the browser upon running the script via webpack serve
@@ -39,7 +39,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./src/template.html",
+      template: "./src/templates/index.html",
+      chunks: ["index"]
+    }),
+    new HtmlWebpackPlugin({
+      filename: "rrr.html",
+      tempate: "./src/templates/rrr.html",
+      chunks: ["index"]
     }),
     new BundleAnalyzerPlugin(),
   ],
