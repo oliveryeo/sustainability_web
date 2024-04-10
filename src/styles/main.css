@@ -145,12 +145,10 @@
 
 #carousel > .carousel-slide-indicator {
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: 1.5%;
+  left: 50%;
+  transform: translate(-50%, 0); /* Centering - https://stackoverflow.com/questions/1776915/how-can-i-center-an-absolutely-positioned-element-in-a-div */
   background-color: lightblue;
-  margin-left: auto;
-  margin-right: auto;
   width: 20%;
   display: flex;
   justify-content: center;
