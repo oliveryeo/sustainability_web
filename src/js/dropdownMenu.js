@@ -1,5 +1,3 @@
-// import './styles/main.css';
-
 const runDropdownMenuEvents = () => {
   const dropdownMenu = document.querySelector("#help-dropdown");
   const dropdownTab = document.querySelector(".dropdown-tab");
