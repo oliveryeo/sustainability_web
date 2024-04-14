@@ -17,7 +17,6 @@ dropdownMenuIcon.alt = "dropdown triangle";
 const slideImageOne = document.getElementById("image-slider-1");
 const slideImageTwo = document.getElementById("image-slider-2");
 const slideImageThree = document.getElementById("image-slider-3");
-const slideImageFour = document.getElementById("image-slider-4");
 
 // Run dropdown menu events
 runDropdownMenuEvents();
