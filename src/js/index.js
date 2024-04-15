@@ -16,6 +16,9 @@ const dropdownMenuIcon = document.querySelector("#help-dropdown > img");
 dropdownMenuIcon.src = triangleImg;
 dropdownMenuIcon.alt = "dropdown triangle";
 
+// Run dropdown menu events - Can probably separate this into a separate navbar javascript file
+runDropdownMenuEvents();
+
 // Images and captions for slide show
 const slideImageOne = document.querySelector("#image-slider-1 > img");
 slideImageOne.src = slideImgOne;
@@ -32,5 +35,32 @@ slideImageThree.src = slideImgThree;
 const captionThree = document.querySelector("#image-slider-3 > figcaption");
 captionThree.textContent = "Seal getting trapped by plastic wastes";
 
-// Run dropdown menu events
-runDropdownMenuEvents();
+// Logic for carousel
+let slideIndex = 1;
+const allSlides = document.querySelectorAll(".carousel-slide > div");
+showSlides();
+
+function showSlides() {
+  // Hide all slides
+  allSlides.forEach(slide => {
+    slide.style.display = "none";
+  });
+
+  // Identify the slide to display
+  const slideToDisplay = allSlides[slideIndex - 1];
+  slideToDisplay.style.display = "block";
+
+  // Add the counter for the next slide
+  slideIndex++;
+
+  // Reset slide index if cross slides threshold number
+  if (slideIndex > allSlides.length) {
+    slideIndex = 1;
+  }
+  
+  // Change slide every 4 seconds
+  setTimeout(showSlides, 4000);
+  
+}
+
+
