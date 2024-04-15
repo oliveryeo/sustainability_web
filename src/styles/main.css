@@ -164,6 +164,8 @@
 #carousel > .carousel-slide figcaption {
   text-align: center;
   background-color: rgb(179, 231, 253);
+  padding: 0.5rem 0;
+  border-top: solid;
 }
 
 #carousel > .carousel-slide-indicator {
