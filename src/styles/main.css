@@ -168,24 +168,12 @@
   border-top: solid;
 }
 
-#carousel > .carousel-slide-indicator {
-  position: absolute;
-  bottom: -5%;
-  left: 50%;
-  transform: translate(-50%, 0); /* Centering - https://stackoverflow.com/questions/1776915/how-can-i-center-an-absolutely-positioned-element-in-a-div */
-  /* background-color: lightblue; */
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 #carousel > .carousel-left-arrow, #carousel > .carousel-right-arrow {
   position: absolute;
   height: 3rem;
   background-color: rgba(128, 127, 127, 0.5);
   filter: invert(98%) sepia(14%) saturate(399%) hue-rotate(1deg) brightness(106%) contrast(101%); /* Change svg color to white */
+  cursor: pointer;
 }
 
 #carousel > .carousel-left-arrow {
@@ -199,9 +187,22 @@
   transform: translate(0, -75%);
 }
 
+#carousel > .carousel-slide-indicator {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%, 0); /* Centering - https://stackoverflow.com/questions/1776915/how-can-i-center-an-absolutely-positioned-element-in-a-div */
+  /* background-color: lightblue; */
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 #carousel > .carousel-slide-indicator > span {
   --indicator-size: 0.8rem;
-  background-color: gray;
+  background-color: lightgray;
   width: var(--indicator-size);
   height: var(--indicator-size);
   border-radius: var(--indicator-size);
