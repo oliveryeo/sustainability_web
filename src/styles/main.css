@@ -181,6 +181,24 @@
   gap: 1rem;
 }
 
+#carousel > .carousel-left-arrow, #carousel > .carousel-right-arrow {
+  position: absolute;
+  height: 3rem;
+  background-color: rgba(128, 127, 127, 0.5);
+  filter: invert(98%) sepia(14%) saturate(399%) hue-rotate(1deg) brightness(106%) contrast(101%); /* Change svg color to white */
+}
+
+#carousel > .carousel-left-arrow {
+  top: 50%;
+  transform: translate(0, -75%);
+}
+
+#carousel > .carousel-right-arrow {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -75%);
+}
+
 #carousel > .carousel-slide-indicator > span {
   --indicator-size: 0.8rem;
   background-color: gray;

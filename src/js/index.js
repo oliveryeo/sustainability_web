@@ -4,6 +4,8 @@ import triangleImg from "../assets/triangle-down.svg";
 import slideImgOne from "../assets/slideshow-image-1.png";
 import slideImgTwo from "../assets/slideshow-image-2.png";
 import slideImgThree from "../assets/slideshow-image-3.png";
+import slideArrowLeftImg from "../assets/slideshow-left-arrow.svg";
+import slideArrowRightImg from "../assets/slideshow-right-arrow.svg";
 import { runDropdownMenuEvents } from "./dropdownMenu";
 
 // Logo for homepage title - Can probably separate this into a separate navbar javascript file
@@ -22,18 +24,30 @@ runDropdownMenuEvents();
 // Images and captions for slide show
 const slideImageOne = document.querySelector("#image-slider-1 > img");
 slideImageOne.src = slideImgOne;
+slideImageOne.alt = "Beach shores becoming a garbage magnet for plastic waste";
 const captionOne = document.querySelector("#image-slider-1 > figcaption");
 captionOne.textContent = "Beach shores becoming a garbage magnet for plastic waste";
 
 const slideImageTwo = document.querySelector("#image-slider-2 > img");
 slideImageTwo.src = slideImgTwo;
+slideImageTwo.alt = "Sea turtles mistake plastic waste as jellyfish for food";
 const captionTwo = document.querySelector("#image-slider-2 > figcaption");
 captionTwo.textContent = "Sea turtles mistake plastic waste as jellyfish for food";
 
 const slideImageThree = document.querySelector("#image-slider-3 > img");
 slideImageThree.src = slideImgThree;
+slideImageThree.alt = "Seal getting trapped by plastic wastes";
 const captionThree = document.querySelector("#image-slider-3 > figcaption");
 captionThree.textContent = "Seal getting trapped by plastic wastes";
+
+// Images for slide arrows
+const slideArrowLeft = document.querySelector(".carousel-left-arrow");
+slideArrowLeft.src = slideArrowLeftImg;
+slideArrowLeft.alt = "Left Arrow for slide change";
+
+const slideArrowRight = document.querySelector(".carousel-right-arrow");
+slideArrowRight.src = slideArrowRightImg;
+slideArrowRight.alt = "Right Arrow for slide change";
 
 // Logic for carousel
 let slideIndex = 1;
