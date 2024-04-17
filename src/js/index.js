@@ -6,6 +6,7 @@ import slideImgTwo from "../assets/slideshow-image-2.png";
 import slideImgThree from "../assets/slideshow-image-3.png";
 import slideArrowLeftImg from "../assets/slideshow-left-arrow.svg";
 import slideArrowRightImg from "../assets/slideshow-right-arrow.svg";
+import savingEarthImg from "../assets/saving-earth.png";
 import { runDropdownMenuEvents } from "./dropdownMenu";
 
 /* 
@@ -24,6 +25,18 @@ dropdownMenuIcon.alt = "dropdown triangle";
 // Run dropdown menu events - Can probably separate this into a separate navbar javascript file
 runDropdownMenuEvents();
 
+
+/*
+  *****************LOGIC FOR INTRO*****************
+*/
+const introImage = document.querySelector("#intro > .intro-paragraph > img");
+introImage.src = savingEarthImg;
+introImage.alt = "Saving Out Earth, One at a Time";
+
+
+/*
+  *****************LOGIC FOR CAROUSEL SLIDES*****************
+*/
 // Images and captions for slide show
 const slideImageOne = document.querySelector("#image-slider-1 > img");
 slideImageOne.src = slideImgOne;
@@ -54,9 +67,7 @@ const slideArrowRight = document.querySelector(".carousel-right-arrow");
 slideArrowRight.src = slideArrowRightImg;
 slideArrowRight.alt = "Right Arrow for slide change";
 
-/*
-  *****************LOGIC FOR CAROUSEL SLIDES*****************
-*/
+// Start of carousel logic
 let slideIndex = 1;
 const allSlides = document.querySelectorAll(".carousel-slide > div");
 const allIndicators = document.querySelectorAll(
